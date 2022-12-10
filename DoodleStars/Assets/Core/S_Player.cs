@@ -4,15 +4,20 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(S_Perks))]
 public class S_Player : MonoBehaviour
 {
+    [SerializeField] public S_Perks s_perks;
     [SerializeField] S_Input s_input;
     [SerializeField] Transform m_feets;
+    [SerializeField] float screenSize = 5;
+    [SerializeField] float spawnSize = 5;
     [SerializeField] float feetSize;
     [SerializeField] float gravityScale = 5;
     [SerializeField] float jumpForce = 5;
     [SerializeField] float horizontalVelocity = 5;
     public float upwardVelocity;
+    private float defaultX;
 
     public Vector2 feet2DPos
     {
@@ -24,6 +29,11 @@ public class S_Player : MonoBehaviour
         get { return upwardVelocity > 0; }
     }
 
+    private void Awake()
+    {
+        defaultX = transform.position.x;
+    }
+
     private void Update()
     {
         // if bouncing on a platform
@@ -32,12 +42,16 @@ public class S_Player : MonoBehaviour
             // do somthing every time it touche somthing
         }
 
+        // teleportation
+        if(transform.position.x < -screenSize + defaultX) transform.position += new Vector3(2*screenSize,0,0);
+        if(transform.position.x > screenSize + defaultX) transform.position -= new Vector3(2*screenSize,0,0);
+
         // gravity affect vertical velocity
         upwardVelocity -= Time.deltaTime * gravityScale;
 
         // moving the object
-        transform.transform.Translate(Vector3.up * upwardVelocity * 0.01f);
-        transform.transform.Translate(Vector3.right * 0.01f * s_input.xAxis * horizontalVelocity);
+        transform.transform.Translate(Vector3.up * upwardVelocity * Time.deltaTime * 8);
+        transform.transform.Translate(Vector3.right * Time.deltaTime * 8 * s_input.xAxis * horizontalVelocity);
 
     }
 
@@ -46,6 +60,12 @@ public class S_Player : MonoBehaviour
     {
         upwardVelocity = jumpForce;
     }
+
+    public void Jump(float force)
+    {
+        upwardVelocity = jumpForce * force;
+    }
+
 
 
 
@@ -90,5 +110,14 @@ public class S_Player : MonoBehaviour
         const float scaleUp = 0.1f;
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(m_feets.position + Vector3.up * scaleUp * 0.5f, new Vector3(feetSize, scaleUp, 0.1f));
+
+        // teleport lines
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(new Vector3(screenSize + defaultX, transform.position.y + screenSize, 0), new Vector3(screenSize + defaultX, transform.position.y - screenSize, 0));
+        Gizmos.DrawLine(new Vector3(-screenSize + defaultX, transform.position.y + screenSize, 0), new Vector3(-screenSize + defaultX, transform.position.y - screenSize, 0));
+    
+        // spawn line
+        // Gizmos.color = Color.red;
+        // Gizmos.DrawLine(new Vector3(defaultX + spawnSize, transform.position.y + 5, 0), new Vector3(defaultX - spawnSize, transform.position.y + 5, 0));
     }
 }
