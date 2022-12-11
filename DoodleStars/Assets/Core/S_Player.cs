@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(S_Perks))]
 public class S_Player : MonoBehaviour
@@ -18,6 +19,27 @@ public class S_Player : MonoBehaviour
     [SerializeField] float horizontalVelocity = 5;
     public float upwardVelocity;
     private float defaultX;
+
+    public UnityEvent OnDeath;
+    private bool isAlive = true;
+    public bool IsAlive
+    {
+        get { return isAlive; }
+        set { 
+            isAlive = value;
+            if (!value) // on death
+            {
+                upwardVelocity = jumpForce * 0.5f; // little jump
+                OnDeath?.Invoke();
+            }
+        }
+    }
+
+    /* boost */
+    private float boostTime = 0;
+    private float boostForce = 1;
+    private float boostAcceleration = 1;
+    private string boostName = "hat";
 
     public Vector2 feet2DPos
     {
@@ -36,23 +58,42 @@ public class S_Player : MonoBehaviour
 
     private void Update()
     {
-        // if bouncing on a platform
-        if (!isMovingUp && TouchPlatform())
-        {
-            // do somthing every time it touche somthing
-        }
 
-        // teleportation
-        if(transform.position.x < -screenSize + defaultX) transform.position += new Vector3(2*screenSize,0,0);
-        if(transform.position.x > screenSize + defaultX) transform.position -= new Vector3(2*screenSize,0,0);
 
         // gravity affect vertical velocity
         upwardVelocity -= Time.deltaTime * gravityScale;
 
-        // moving the object
-        transform.transform.Translate(Vector3.up * upwardVelocity * Time.deltaTime * 8);
-        transform.transform.Translate(Vector3.right * Time.deltaTime * 8 * s_input.xAxis * horizontalVelocity);
+        if (IsAlive)
+        {
+            // if bouncing on a platform
+            if (!isMovingUp && TouchPlatform())
+            {
+                // do somthing every time it touch a platform
+            }
 
+            // boost
+            if (boostTime > 0)
+            {
+                boostTime -= Time.deltaTime;
+                upwardVelocity = Mathf.Clamp(upwardVelocity + 0.01f * boostAcceleration, 0, boostForce);
+                if (boostTime <= 0)
+                {
+                    // when the boost ends
+                    s_perks.SetWearableByName(boostName, false);
+                }
+            }
+
+            // teleportation
+            if (transform.position.x < -screenSize + defaultX) transform.position += new Vector3(2*screenSize,0,0);
+            if(transform.position.x > screenSize + defaultX) transform.position -= new Vector3(2*screenSize,0,0);
+
+            // moving the object horizontaly
+            transform.transform.Translate(Vector3.right * Time.deltaTime * 8 * s_input.xAxis * horizontalVelocity);
+
+        }
+
+        // move verticaly
+        transform.transform.Translate(Vector3.up * upwardVelocity * Time.deltaTime * 8);
     }
 
 
@@ -64,6 +105,15 @@ public class S_Player : MonoBehaviour
     public void Jump(float force)
     {
         upwardVelocity = jumpForce * force;
+    }
+
+    public void Boost(float time, float force, string hatName)
+    {
+        // remove old hat
+        if (boostTime > 0) { s_perks.SetWearableByName(boostName, false); }
+        boostTime = Mathf.Max(boostTime, time);
+        boostForce = force;
+        boostName = hatName;
     }
 
 

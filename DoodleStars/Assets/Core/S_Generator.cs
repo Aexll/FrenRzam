@@ -5,6 +5,7 @@ using UnityEngine;
 public class S_Generator : MonoBehaviour
 {
     public List<GameObject> platforms;
+    public List<int> platform_raritys;
     public List<GameObject> bonus;
     public float spawnSize;
     public float spawnHeight;
@@ -15,6 +16,14 @@ public class S_Generator : MonoBehaviour
     private void Awake()
     {
         xPos = transform.position.x;
+
+        for (int i = 0; i < platform_raritys.Count; i++)
+        {
+            for (int j = 0; j < platform_raritys[i]; j++)
+            {
+                platforms.Add(platforms[i]);
+            }
+        }
     }
 
 
@@ -29,8 +38,13 @@ public class S_Generator : MonoBehaviour
         if(transform.position.y > currentHeigth)
         {
             currentHeigth = Mathf.RoundToInt(gameObject.transform.position.y) + 1;
-            Instantiate(platforms[Random.Range(0,platforms.Count)], new Vector3(xPos + Random.Range(spawnSize,-spawnSize),transform.position.y + spawnHeight, 0), Quaternion.identity);
+            var s = Instantiate(platforms[Random.Range(0,platforms.Count)], new Vector3(xPos + Random.Range(spawnSize,-spawnSize),transform.position.y + spawnHeight, 0), Quaternion.identity);
             if(Random.Range(0,10) == 0) Instantiate(bonus[Random.Range(0,bonus.Count)], new Vector3(xPos + Random.Range(spawnSize,-spawnSize),transform.position.y + spawnHeight + 0.5f, 0), Quaternion.identity);
+            var spawnScript = s.GetComponent<ISpawn>();
+            if(spawnScript != null)
+            {
+                spawnScript.Spawn(currentHeigth/50);
+            }
         }
     }
 
