@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3413717804222839483}
   - component: {fileID: 3413717804222839476}
   - component: {fileID: 3413717804222839477}
+  - component: {fileID: 7299706475972835234}
   - component: {fileID: 3413717804222839478}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3413717804222839472}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.003, y: -0.88, z: 0}
-  m_LocalScale: {x: 0.2549975, y: 0.63965845, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.017, y: 0.27, z: 0}
+  m_LocalScale: {x: 0.5, y: 1.7300001, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6917670967570661769}
-  m_RootOrder: 1
+  m_Father: {fileID: 6776098529028856027}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3413717804222839483
 SpriteRenderer:
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: f730d01e046db2d4486ab65397c75733, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0246b4fa04e54cc49a8cd32d4fd63400, type: 3}
+  m_Color: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -104,14 +105,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.78, y: 2.2}
+    oldSize: {x: 1.32, y: 0.53}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.42, y: 0.84}
+  m_Size: {x: 1.43, y: 0.51}
   m_EdgeRadius: 0
 --- !u!114 &3413717804222839477
 MonoBehaviour:
@@ -131,6 +132,34 @@ MonoBehaviour:
   OnTriggerPlayer:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7299706475972835234}
+        m_TargetAssemblyTypeName: S_DirectionSorter, Assembly-CSharp
+        m_MethodName: SortPlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7299706475972835234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413717804222839472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb51282299db3746abe420d138304d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceptDirection: 1
+  OnAccept:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 3413717804222839478}
         m_TargetAssemblyTypeName: S_Stunner, Assembly-CSharp
         m_MethodName: Stun
@@ -143,6 +172,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDecline:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3413717804222839478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +187,182 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4f1470894cb64468d9d9978020c2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4735372297842183588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6776098529028856027}
+  - component: {fileID: 3817349189311148939}
+  - component: {fileID: 1491054538267407994}
+  m_Layer: 0
+  m_Name: Spiky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6776098529028856027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4735372297842183588}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3413717804222839479}
+  m_Father: {fileID: 6917670967570661769}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3817349189311148939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4735372297842183588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec511c14b4c77644baaf90b45eefdb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toAnimate: {fileID: 6776098529028856027}
+  sizeX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.012504617
+      outSlope: -0.012504617
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.24049798
+    - serializedVersion: 3
+      time: 1.0075372
+      value: 0.89985394
+      inSlope: -0.29482448
+      outSlope: -0.29482448
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.045613468
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  sizeY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 5
+  OnEndAnimation:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3413717804222839472}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1491054538267407994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4735372297842183588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec511c14b4c77644baaf90b45eefdb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toAnimate: {fileID: 6776098529028856027}
+  sizeX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.013580322
+      value: 0.9000435
+      inSlope: 0.2265365
+      outSlope: 0.2265365
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.031728692
+    - serializedVersion: 3
+      time: 1.0135803
+      value: 1.0001907
+      inSlope: 0.0014382937
+      outSlope: 0.0014382937
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5135164
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  sizeY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0000017676502
+      value: 1.0000105
+      inSlope: -3.0559025
+      outSlope: -3.0559025
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.038149167
+    - serializedVersion: 3
+      time: 1.0188599
+      value: -0.005672455
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 5
+  OnEndAnimation:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6917670967228500845
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +437,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6469ca69548c96144a3120bb0c74c6c8, type: 3}
-  m_Color: {r: 0.4198113, g: 1, b: 0.9389969, a: 1}
+  m_Color: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -250,11 +458,13 @@ GameObject:
   - component: {fileID: 6917670967570661769}
   - component: {fileID: 6829868845471316030}
   - component: {fileID: 8634181972443306697}
+  - component: {fileID: 4574252344339171571}
+  - component: {fileID: 2937246668854504230}
   - component: {fileID: 2192611776780158802}
   - component: {fileID: 3664331416323371682}
   - component: {fileID: 5281667533972573559}
   m_Layer: 0
-  m_Name: P_IceSpikes
+  m_Name: P_Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,7 +483,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6917670967228500834}
-  - {fileID: 3413717804222839479}
+  - {fileID: 6776098529028856027}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -320,6 +530,97 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   jumpforce: 1
+--- !u!114 &4574252344339171571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6917670967570661768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3169fd234d9fd4a9cbead453620716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoStart: 1
+  loop: 1
+  OnFusePercent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2937246668854504230}
+        m_TargetAssemblyTypeName: S_FlipFlop, Assembly-CSharp
+        m_MethodName: Exec
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  delay: 1
+--- !u!114 &2937246668854504230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6917670967570661768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d30c0f4c5cbaf4c84a3919f07e542f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  OnA:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3817349189311148939}
+        m_TargetAssemblyTypeName: S_AnimSize, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnB:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3413717804222839472}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1491054538267407994}
+        m_TargetAssemblyTypeName: S_AnimSize, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnAny:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2192611776780158802
 MonoBehaviour:
   m_ObjectHideFlags: 0

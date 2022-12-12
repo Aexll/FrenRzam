@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class S_Delayer : MonoBehaviour
 {
-
+    public bool autoStart = false;
     public bool loop = false;
     public UnityEvent<float> OnFusePercent;
     public UnityEvent OnTrigger;
@@ -13,6 +13,13 @@ public class S_Delayer : MonoBehaviour
 
     private Coroutine currentCoroutine;
 
+    private void Start()
+    {
+        if(autoStart)
+        {
+            StartDelayer();
+        }
+    }
 
     public void StartDelayer()
     {
