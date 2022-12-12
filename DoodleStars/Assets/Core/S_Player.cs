@@ -25,12 +25,16 @@ public class S_Player : MonoBehaviour
     public bool IsAlive
     {
         get { return isAlive; }
-        set { 
-            isAlive = value;
-            if (!value) // on death
+        set
+        {
+            if (isAlive != value && !(boostTime>0))
             {
-                upwardVelocity = jumpForce * 0.5f; // little jump
-                OnDeath?.Invoke();
+                isAlive = value;
+                if (!value) // on death
+                {
+                    upwardVelocity = jumpForce * 0.5f; // little jump
+                    OnDeath?.Invoke();
+                }
             }
         }
     }
@@ -84,8 +88,8 @@ public class S_Player : MonoBehaviour
             }
 
             // teleportation
-            if (transform.position.x < -screenSize + defaultX) transform.position += new Vector3(2*screenSize,0,0);
-            if(transform.position.x > screenSize + defaultX) transform.position -= new Vector3(2*screenSize,0,0);
+            if (transform.position.x < -screenSize + defaultX) transform.position += new Vector3(2 * screenSize, 0, 0);
+            if (transform.position.x > screenSize + defaultX) transform.position -= new Vector3(2 * screenSize, 0, 0);
 
             // moving the object horizontaly
             transform.transform.Translate(Vector3.right * Time.deltaTime * 8 * s_input.xAxis * horizontalVelocity);
@@ -115,7 +119,6 @@ public class S_Player : MonoBehaviour
         boostForce = force;
         boostName = hatName;
     }
-
 
 
 
@@ -165,7 +168,7 @@ public class S_Player : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(new Vector3(screenSize + defaultX, transform.position.y + screenSize, 0), new Vector3(screenSize + defaultX, transform.position.y - screenSize, 0));
         Gizmos.DrawLine(new Vector3(-screenSize + defaultX, transform.position.y + screenSize, 0), new Vector3(-screenSize + defaultX, transform.position.y - screenSize, 0));
-    
+
         // spawn line
         // Gizmos.color = Color.red;
         // Gizmos.DrawLine(new Vector3(defaultX + spawnSize, transform.position.y + 5, 0), new Vector3(defaultX - spawnSize, transform.position.y + 5, 0));
