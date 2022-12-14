@@ -92,7 +92,8 @@ public class S_Player : MonoBehaviour
             if (transform.position.x > screenSize + defaultX) transform.position -= new Vector3(2 * screenSize, 0, 0);
 
             // moving the object horizontaly
-            transform.transform.Translate(Vector3.right * Time.deltaTime * 8 * s_input.xAxis * horizontalVelocity);
+            if(s_input)
+                transform.transform.Translate(Vector3.right * Time.deltaTime * 8 * s_input.xAxis * horizontalVelocity);
 
         }
 

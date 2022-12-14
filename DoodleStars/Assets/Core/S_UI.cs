@@ -7,6 +7,7 @@ public class S_UI : MonoBehaviour
 {
 
     public GameObject LoseWidget;
+    public string menuMapName;
 
     public void ShowLose()
     {
@@ -15,6 +16,6 @@ public class S_UI : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(menuMapName);
     }
 }
