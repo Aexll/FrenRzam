@@ -15,8 +15,11 @@ public class S_SpriteCustomizer : MonoBehaviour
 
     public void SetSprite(string spriteName)
     {
-        PlayerPrefs.SetString("playerSprite", spriteName);
-        OnSpriteChanged?.Invoke(spritesList[spriteName]);
+        if(spriteName != null)
+        {
+            PlayerPrefs.SetString("playerSprite", spriteName);
+            OnSpriteChanged?.Invoke(spritesList[spriteName]);
+        }
     }
 
     private void Awake()
@@ -25,6 +28,12 @@ public class S_SpriteCustomizer : MonoBehaviour
         {
             spritesList[default_names[i]] = default_sprite[i];
         }
+    }
+
+    private void Start()
+    {
+        // load the sprite saved
+        SetSprite(PlayerPrefs.GetString("playerSprite"));
     }
 
 }
