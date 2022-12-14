@@ -1798,6 +1798,7 @@ GameObject:
   - component: {fileID: 1655117490}
   - component: {fileID: 1655117493}
   - component: {fileID: 1655117494}
+  - component: {fileID: 1655117498}
   - component: {fileID: 1655117492}
   - component: {fileID: 1655117491}
   m_Layer: 0
@@ -2138,6 +2139,24 @@ MonoBehaviour:
   playerRef: {fileID: 1655117488}
   toSpawn: {fileID: 7166490725084159830, guid: 6aedf7c76d032e341a977b300af5c349, type: 3}
   spawnTransform: {fileID: 1714155382}
+--- !u!114 &1655117498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655117487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89c7c6f975381347badf791405c88c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteToChange:
+  - {fileID: 2072329101}
+  - {fileID: 1530278759}
+  OnSpriteChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1714155381
 GameObject:
   m_ObjectHideFlags: 0
