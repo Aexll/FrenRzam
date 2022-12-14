@@ -16,6 +16,7 @@ public class S_MapSelector : MonoBehaviour
         {
             selectedMap = mapName;
             PlayerPrefs.SetString("map", selectedMap);
+            OnSelectMap?.Invoke(mapName);
         }
     }
 
