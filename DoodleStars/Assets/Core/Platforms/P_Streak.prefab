@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 4764007523400683734}
   - component: {fileID: 6180804211276972101}
   - component: {fileID: 3376115353603446666}
+  - component: {fileID: 911236632197347383}
+  - component: {fileID: 4189378144268781843}
+  - component: {fileID: 1206751332041221042}
   - component: {fileID: 4146466412446232323}
   m_Layer: 0
   m_Name: P_Streak
@@ -70,6 +73,42 @@ MonoBehaviour:
       - m_Target: {fileID: 6180804211276972101}
         m_TargetAssemblyTypeName: S_PoistionRandomizer, Assembly-CSharp
         m_MethodName: Generate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 911236632197347383}
+        m_TargetAssemblyTypeName: S_ScoreAdder, Assembly-CSharp
+        m_MethodName: AddScoreToPlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4189378144268781843}
+        m_TargetAssemblyTypeName: S_Spawner, Assembly-CSharp
+        m_MethodName: Act
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1206751332041221042}
+        m_TargetAssemblyTypeName: S_Counter, Assembly-CSharp
+        m_MethodName: Plus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -148,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35897593f917682459989a758b76f86e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  center: {x: 0, y: 2, z: 0}
+  center: {x: 0, y: 3, z: 0}
   boxExtend: {x: 5, y: 0, z: 0}
   screenSize: 6
   OnGenerated:
@@ -196,6 +235,104 @@ MonoBehaviour:
   autoStart: 0
   loop: 0
   OnDestinationReached:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &911236632197347383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209203923307537404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ada92ffa142b74d8b73572062d1e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 1
+--- !u!114 &4189378144268781843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209203923307537404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b474c48c9b4b40e4f858c26dd0a6d08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRef: {fileID: 0}
+  toSpawn: {fileID: 7166490725084159830, guid: 0564e27c402fe4d4dbc2980c5355a633, type: 3}
+  spawnTransform: {fileID: 1209203923485993238}
+--- !u!114 &1206751332041221042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209203923307537404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a442f58a44f5ee741a537d016f48684b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: 0
+  events:
+  - condition: 0
+    index: 5
+    action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4764007523400683734}
+          m_TargetAssemblyTypeName: S_Destroyer, Assembly-CSharp
+          m_MethodName: Act
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 4189378144268781843}
+          m_TargetAssemblyTypeName: S_Spawner, Assembly-CSharp
+          m_MethodName: Act
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 4189378144268781843}
+          m_TargetAssemblyTypeName: S_Spawner, Assembly-CSharp
+          m_MethodName: Act
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 4189378144268781843}
+          m_TargetAssemblyTypeName: S_Spawner, Assembly-CSharp
+          m_MethodName: Act
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  OnCounterChanged:
     m_PersistentCalls:
       m_Calls: []
 --- !u!61 &4146466412446232323
@@ -297,8 +434,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6469ca69548c96144a3120bb0c74c6c8, type: 3}
-  m_Color: {r: 1, g: 0.3820755, b: 0.9297261, a: 1}
+  m_Sprite: {fileID: 21300000, guid: de0605a55514cc84d985e21aa6e74715, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
