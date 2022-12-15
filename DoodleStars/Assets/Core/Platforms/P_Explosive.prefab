@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoStart: 0
-  loop: 1
+  loop: 0
   OnFusePercent:
     m_PersistentCalls:
       m_Calls:
@@ -201,18 +201,6 @@ MonoBehaviour:
   OnTrigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 534944291573367659}
-        m_TargetAssemblyTypeName: S_Explosion, Assembly-CSharp
-        m_MethodName: SetIsExploding
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 6407508922387719203}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -237,7 +225,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  delay: 3
+  delay: 4
 --- !u!114 &678621687246854006
 MonoBehaviour:
   m_ObjectHideFlags: 0
