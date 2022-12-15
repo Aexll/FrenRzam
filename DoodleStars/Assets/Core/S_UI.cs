@@ -18,4 +18,12 @@ public class S_UI : MonoBehaviour
     {
         SceneManager.LoadScene(menuMapName);
     }
+
+    private void Update()
+    {
+        if (LoseWidget.active && (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Space)))
+        {
+            Restart();
+        }
+    }
 }

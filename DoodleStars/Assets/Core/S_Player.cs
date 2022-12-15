@@ -156,7 +156,7 @@ public class S_Player : MonoBehaviour
     }
 
     // trace ray from in the feet range
-    public RaycastHit2D feetRay(float percent, float length = 0.01f, bool debug = false)
+    public RaycastHit2D feetRay(float percent, float length = 0.05f, bool debug = false)
     {
         float offset = Mathf.Lerp(-feetSize * 0.5f, feetSize * 0.5f, percent);
         if (debug) Debug.DrawRay(m_feets.transform.position + (Vector3.right * offset), Vector3.down * length, Color.green, 0.1f);
