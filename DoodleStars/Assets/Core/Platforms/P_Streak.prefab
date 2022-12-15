@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 911236632197347383}
   - component: {fileID: 4189378144268781843}
   - component: {fileID: 1206751332041221042}
+  - component: {fileID: 1876249707773733214}
+  - component: {fileID: 2623765120498039366}
   - component: {fileID: 4146466412446232323}
   m_Layer: 0
   m_Name: P_Streak
@@ -58,6 +60,18 @@ MonoBehaviour:
   OnPlayerTouch:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1876249707773733214}
+        m_TargetAssemblyTypeName: S_CastPlayer, Assembly-CSharp
+        m_MethodName: SetCast
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 510511332496554173}
         m_TargetAssemblyTypeName: S_Jump, Assembly-CSharp
         m_MethodName: Jump
@@ -187,9 +201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35897593f917682459989a758b76f86e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  center: {x: 0, y: 3, z: 0}
+  center: {x: 0, y: 8, z: 0}
   boxExtend: {x: 5, y: 0, z: 0}
-  screenSize: 6
+  screenSize: 3
   OnGenerated:
     m_PersistentCalls:
       m_Calls:
@@ -229,6 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e66a446afcf3c945b5c5bac344ec350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal: 0
+  speedByHeight: 0
   toGo: {x: 0, y: 0, z: 0}
   speed: 3
   relative: 0
@@ -332,9 +348,79 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1876249707773733214}
+          m_TargetAssemblyTypeName: S_CastPlayer, Assembly-CSharp
+          m_MethodName: Act
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   OnCounterChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1876249707773733214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209203923307537404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b478005b70e0359409111d3f0e73a440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2623765120498039366}
+        m_TargetAssemblyTypeName: S_DoN, Assembly-CSharp
+        m_MethodName: Act
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2623765120498039366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209203923307537404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef57e32f02ae0114ab08cbfc297c5f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: 4
+  OnActionInt:
+    m_PersistentCalls:
+      m_Calls: []
+  OnActionPlayer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 911236632197347383}
+        m_TargetAssemblyTypeName: S_ScoreAdder, Assembly-CSharp
+        m_MethodName: AddScoreToPlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &4146466412446232323
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -489,6 +575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e66a446afcf3c945b5c5bac344ec350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal: 1
+  speedByHeight: 1
   toGo: {x: 5, y: 0, z: 0}
   speed: 0.2
   relative: 1
