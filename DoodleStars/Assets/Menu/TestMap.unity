@@ -1074,6 +1074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoseWidget: {fileID: 1850832303}
+  menuMapName: TestMap
 --- !u!1001 &553113592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1792,6 +1793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1655117489}
   - component: {fileID: 1655117488}
+  - component: {fileID: 1655117499}
   - component: {fileID: 1655117496}
   - component: {fileID: 1655117497}
   - component: {fileID: 1655117495}
@@ -1856,6 +1858,21 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+  OnJump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1655117499}
+        m_TargetAssemblyTypeName: S_AnimSize, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!4 &1655117489
 Transform:
@@ -2155,6 +2172,104 @@ MonoBehaviour:
   - {fileID: 2072329101}
   - {fileID: 1530278759}
   OnSpriteChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1655117499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655117487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec511c14b4c77644baaf90b45eefdb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toAnimate:
+  - {fileID: 2072329100}
+  - {fileID: 1530278760}
+  sizeX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 1.147731
+      outSlope: 1.147731
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.12481552
+      value: 1.1432546
+      inSlope: 0.029085834
+      outSlope: 0.029085834
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.39361575
+    - serializedVersion: 3
+      time: 0.54386765
+      value: 1.0241642
+      inSlope: -0.20991743
+      outSlope: -0.20991743
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.05297629
+      outSlope: -0.05297629
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  sizeY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.6120399
+      outSlope: 0.6120399
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4934292
+      value: 1.3019984
+      inSlope: 0.022484163
+      outSlope: 0.022484163
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15815967
+      outWeight: 0.4854093
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.5961622
+      outSlope: -0.5961622
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 2
+  restartIfRunning: 0
+  OnAnimation:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEndAnimation:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1714155381

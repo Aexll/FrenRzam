@@ -20,7 +20,12 @@ public class S_Player : MonoBehaviour
     public float upwardVelocity;
     private float defaultX;
 
+    /* events */
     public UnityEvent OnDeath;
+    public UnityEvent<Vector3> OnJump;
+
+
+
     private bool isAlive = true;
     public bool IsAlive
     {
@@ -73,6 +78,7 @@ public class S_Player : MonoBehaviour
             if (!isMovingUp && TouchPlatform())
             {
                 // do somthing every time it touch a platform
+                OnJump?.Invoke(gameObject.transform.position);
             }
 
             // boost

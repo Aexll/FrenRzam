@@ -90,7 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec511c14b4c77644baaf90b45eefdb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toAnimate: {fileID: 3370381109207520305}
+  toAnimate:
+  - {fileID: 3370381109207520305}
   sizeX:
     serializedVersion: 2
     m_Curve:
@@ -158,6 +159,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   speed: 1
+  restartIfRunning: 0
+  OnAnimation:
+    m_PersistentCalls:
+      m_Calls: []
   OnEndAnimation:
     m_PersistentCalls:
       m_Calls: []
