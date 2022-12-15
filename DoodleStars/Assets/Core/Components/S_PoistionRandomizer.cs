@@ -21,9 +21,9 @@ public class S_PoistionRandomizer : MonoBehaviour
 
     public void Generate()
     {
-        var rx = Mathf.Clamp(Random.Range(transform.position.x -boxExtend.x,transform.position.x + boxExtend.x), playerX-screenSize, playerX+screenSize);
+        var rx = Mathf.Clamp(Random.Range(transform.position.x - boxExtend.x, transform.position.x + boxExtend.x), playerX-screenSize, playerX+screenSize);
         var ry = Random.Range(-boxExtend.y, boxExtend.y);
-        Vector3 rpos = new Vector3(rx, center.y + ry, 0);
+        Vector3 rpos = new Vector3(rx, transform.position.y + center.y + ry, 0);
         OnGenerated?.Invoke(rpos);
     }
 
