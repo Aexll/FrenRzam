@@ -44,6 +44,7 @@ public class S_BiomeGen : MonoBehaviour
 
     /* events */
     public UnityEvent<string> OnBiomeChangedString;
+    public UnityEvent<string> OnHeightChanged;
 
     private void Start()
     {
@@ -57,6 +58,7 @@ public class S_BiomeGen : MonoBehaviour
         {
             currentHeight += (currentBiome.step * stepHeightMultiplier);
             GenStage();
+            OnHeightChanged?.Invoke((Mathf.Round(currentHeight)).ToString());
         }
 
         if (transform.position.y > enterBiomeheight + currentBiome.height)
