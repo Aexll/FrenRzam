@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb1bd5e3c275b184d9b6ca8f4f9ef2f7, type: 3}
-  m_Name: B_Future
+  m_Name: B_Winter
   m_EditorClassIdentifier: 
-  naming: Future
-  description: i knew thew had flying cars
-  height: 20
+  naming: Winter
+  description: All i want for christmas, is stars !
+  height: 50
   step: 1
   platforms:
-  - {fileID: 1252860332642512155, guid: a20777b0e22537b499666968302ccffe, type: 3}
-  - {fileID: 1252860332642512155, guid: 5a418e58c6c3d6348a6deb2e7533e13b, type: 3}
-  - {fileID: 3422438880392786653, guid: bbef5f032562390489d99dc813cd1d76, type: 3}
+  - {fileID: 4450929335021072383, guid: c7e640efc0d19a44191e8b3f952c2421, type: 3}
+  - {fileID: 6917670967570661768, guid: 90b278d86a2fde84ab461be3f665a73a, type: 3}
+  - {fileID: 6917670967570661768, guid: a7400c9b1a412a74ca977dcb0f5ca5bc, type: 3}
   spawnrate:
-  - 45
-  - 45
-  - 10
+  - 100
+  - 100
+  - 100

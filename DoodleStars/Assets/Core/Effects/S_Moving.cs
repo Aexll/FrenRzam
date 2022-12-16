@@ -30,9 +30,9 @@ public class S_Moving : MonoBehaviour, ISpawn
         if(speedByHeight)
             speed = Mathf.Clamp(0.2f * diff, 0.1f, 5);
         if (horizontal)
-            toGo = new Vector3(Random.Range(-1, 1) > 0 ? Random.Range(-5, -1) : Random.Range(1, 5), 0, 0);
+            toGo = new Vector3((Random.Range(-1, 1) > 0) ? Random.Range(-5, -1) : Random.Range(1, 5), 0, 0);
         else
-            toGo = new Vector3(0, Random.Range(-1, 1) > 0 ? Random.Range(-5, -1) : Random.Range(1, 5), 0);
+            toGo = new Vector3(0, (Random.Range(-1, 1) > 0) ? Random.Range(-5, -1) : Random.Range(1, 5), 0);
 
     }
 

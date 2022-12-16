@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   naming: Normal
   description: This is the normal biome !
-  height: 10
+  height: 50
   step: 1
   platforms:
   - {fileID: 1209203923307537404, guid: f4d482f3e21b5b1449ac564d01bb82fe, type: 3}

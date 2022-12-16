@@ -26,6 +26,12 @@ public class S_Delayer : MonoBehaviour
         currentCoroutine = StartCoroutine(DelayThenTrigger());
     }
 
+    public void RestartDelayer()
+    {
+        if (currentCoroutine != null) StopCoroutine(currentCoroutine);
+        StartDelayer();
+    }
+
     public void StopDelayer()
     {
         if(currentCoroutine != null) { StopCoroutine(currentCoroutine); }

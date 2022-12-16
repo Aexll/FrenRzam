@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb1bd5e3c275b184d9b6ca8f4f9ef2f7, type: 3}
-  m_Name: B_Future
+  m_Name: B_Ghost
   m_EditorClassIdentifier: 
-  naming: Future
-  description: i knew thew had flying cars
-  height: 20
-  step: 1
+  naming: Temporary
+  description: Where am I ?
+  height: 50
+  step: 2
   platforms:
-  - {fileID: 1252860332642512155, guid: a20777b0e22537b499666968302ccffe, type: 3}
-  - {fileID: 1252860332642512155, guid: 5a418e58c6c3d6348a6deb2e7533e13b, type: 3}
-  - {fileID: 3422438880392786653, guid: bbef5f032562390489d99dc813cd1d76, type: 3}
+  - {fileID: 1209203923307537404, guid: a13c84dfbd6994e4c9574292bbb38b70, type: 3}
+  - {fileID: 1209203923307537404, guid: d866d3c71ea81924e880450e3c02c380, type: 3}
   spawnrate:
-  - 45
-  - 45
-  - 10
+  - 100
+  - 100

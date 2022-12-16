@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   naming: Bonus !
   description: Bonus biome !
-  height: 2
+  height: 5
   step: 1
   platforms:
   - {fileID: 1209203923307537404, guid: 34a3b22d85dfc404796878bf6c2203b7, type: 3}
