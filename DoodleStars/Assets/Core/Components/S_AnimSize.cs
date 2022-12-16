@@ -28,13 +28,20 @@ public class S_AnimSize : MonoBehaviour
     public UnityEvent<float> OnAnimation;
     public UnityEvent OnEndAnimation;
 
+    /* saved cache */
+    private Vector3 savedScale;
+
     public void Animate()
     {
         /* if the coroutine is already running */
         if (currentCoroutine != null && restartIfRunning) return;
 
+        /* stop the already running couroutine */
         if(currentCoroutine != null)
+        {
             StopCoroutine(currentCoroutine);
+            ResetScale();
+        }
 
         /* set the default transform */
         defaultSizes.Clear();
@@ -48,6 +55,7 @@ public class S_AnimSize : MonoBehaviour
 
     public IEnumerator C_Animation(float maxTime)
     {
+        SaveScale();
         float time = 0;
         while (time < maxTime)
         {
@@ -58,6 +66,23 @@ public class S_AnimSize : MonoBehaviour
             time += Time.deltaTime * speed;
             yield return null;
         }
+        ResetScale();
         OnEndAnimation?.Invoke();
+    }
+
+    public void ResetScale()
+    {
+        foreach (var item in toAnimate)
+        {
+            item.transform.localScale = savedScale;
+        }
+    }
+
+    public void SaveScale()
+    {
+        foreach (var item in toAnimate)
+        {
+            savedScale = item.transform.localScale;
+        }
     }
 }

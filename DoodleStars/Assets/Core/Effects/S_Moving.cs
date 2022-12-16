@@ -10,6 +10,8 @@ public interface ISpawn
 
 public class S_Moving : MonoBehaviour, ISpawn
 {
+    [SerializeField] private bool horizontal = true;
+    [SerializeField] private bool speedByHeight = true;
     [SerializeField] private Vector3 toGo;
     [SerializeField] private float speed = 0.2f;
     [SerializeField] private bool relative = true;
@@ -25,8 +27,13 @@ public class S_Moving : MonoBehaviour, ISpawn
 
     public void Spawn(int diff)
     {
-        speed = Mathf.Clamp(0.2f * diff, 0.1f, 5);
-        toGo = new Vector3(Random.Range(-1, 1) > 0 ? Random.Range(-5, -1) : Random.Range(1, 5), 0, 0);
+        if(speedByHeight)
+            speed = Mathf.Clamp(0.2f * diff, 0.1f, 5);
+        if (horizontal)
+            toGo = new Vector3(Random.Range(-1, 1) > 0 ? Random.Range(-5, -1) : Random.Range(1, 5), 0, 0);
+        else
+            toGo = new Vector3(0, Random.Range(-1, 1) > 0 ? Random.Range(-5, -1) : Random.Range(1, 5), 0);
+
     }
 
     public void SetToGo(Vector3 go)
@@ -47,7 +54,9 @@ public class S_Moving : MonoBehaviour, ISpawn
     private void Start()
     {
         if (autoStart)
-            fromGo = transform.position;
+        {
+            StartMoving();
+        }
     }
 
     private void Update()

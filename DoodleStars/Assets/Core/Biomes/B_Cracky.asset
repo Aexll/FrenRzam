@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1bd5e3c275b184d9b6ca8f4f9ef2f7, type: 3}
+  m_Name: B_Cracky
+  m_EditorClassIdentifier: 
+  naming: Cracky
+  description: Dont break you ankle !
+  height: 10
+  step: 1
+  platforms:
+  - {fileID: 4450929335021072383, guid: 99a5af54f3e9d9a44a79987fd2f20822, type: 3}
+  - {fileID: 4450929335021072383, guid: 80304ca930e0e0846b1046bd78b1e0cb, type: 3}
+  spawnrate:
+  - 100
+  - 20
