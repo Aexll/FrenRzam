@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class S_SpriteCustomizer : MonoBehaviour
 {
-
     [SerializeField] private List<Sprite> default_sprite;
     [SerializeField] private List<string> default_names;
 

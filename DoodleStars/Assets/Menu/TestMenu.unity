@@ -1820,6 +1820,8 @@ MonoBehaviour:
   default_sprite:
   - {fileID: 21300000, guid: cdeb71f3b3ff09845b3b9efbc3be80ad, type: 3}
   - {fileID: 21300000, guid: 4748ede80aeec6a4b9a112ae9ba4d432, type: 3}
+  - {fileID: 21300000, guid: a76f30d329869384e92d67dbb7d723a4, type: 3}
+  - {fileID: 21300000, guid: ebd6c29bd7d07a944a05e7ae95ead687, type: 3}
   default_names:
   - angel
   - ninja
@@ -2893,6 +2895,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  OnJump:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1655117489
 Transform:
   m_ObjectHideFlags: 0

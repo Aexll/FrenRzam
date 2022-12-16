@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 public class S_MapSelector : MonoBehaviour
 {
-
     public UnityEvent<string> OnSelectMap;
     public string selectedMap;
 
