@@ -1294,7 +1294,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1533280059}
   - component: {fileID: 1533280060}
-  - component: {fileID: 1533280061}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -1330,22 +1329,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fieldName: Player
---- !u!114 &1533280061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533280058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4f222ee2d0b3ba419041ca79aa4df1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnLoadScene:
-    m_PersistentCalls:
-      m_Calls: []
-  defaultScene: 
 --- !u!1 &1600761936
 GameObject:
   m_ObjectHideFlags: 0
