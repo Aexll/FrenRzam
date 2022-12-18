@@ -30,7 +30,7 @@ public class S_IndexScroller : MonoBehaviour
             Load();
         }
 
-        OnChange.Invoke(selectedOption);
+        OnChange?.Invoke(selectedOption);
     }
 
     public void NextOption()
@@ -52,6 +52,7 @@ public class S_IndexScroller : MonoBehaviour
         if (selectedOption < 0)
         {
             selectedOption = max - 1;
+
         }
 
         OnChange?.Invoke(selectedOption); 
