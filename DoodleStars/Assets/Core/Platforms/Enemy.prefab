@@ -242,7 +242,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2199758021036581115}
   - component: {fileID: 8245817109003975060}
-  - component: {fileID: 92808489459489106}
   - component: {fileID: 850027542591923516}
   - component: {fileID: 1415472242570536353}
   m_Layer: 0
@@ -319,33 +318,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &92808489459489106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3527767713200603241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1ccfbf42d1a7ff4584e355627466cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnTouch:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &850027542591923516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,13 +330,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1230fa1a83ab623499543c164b5f3c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteNumber: 5
   spriteImages:
   - {fileID: 21300000, guid: e4d59f33cacf1814191152a75ddfa3a0, type: 3}
   - {fileID: 21300000, guid: 956064cb82d732047832e838cd5de4e9, type: 3}
   - {fileID: 21300000, guid: b20b53e55f1dc85498acfda73fbc311a, type: 3}
   - {fileID: 21300000, guid: 98d893cfbfda17b4181f503e5a25bd50, type: 3}
   - {fileID: 21300000, guid: c1e7da27ce60fa84294438216e31122e, type: 3}
+  toChange: {fileID: 8245817109003975060}
 --- !u!61 &1415472242570536353
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ public class S_Player : MonoBehaviour
             if (isAlive != value && !(boostTime>0))
             {
                 isAlive = value;
+
                 if (!value) // on death
                 {
                     upwardVelocity = jumpForce * 0.5f; // little jump
@@ -177,5 +178,14 @@ public class S_Player : MonoBehaviour
         // spawn line
         // Gizmos.color = Color.red;
         // Gizmos.DrawLine(new Vector3(defaultX + spawnSize, transform.position.y + 5, 0), new Vector3(defaultX - spawnSize, transform.position.y + 5, 0));
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.name == "Monster")
+        {
+            isAlive = false;
+            OnDeath?.Invoke();
+        }
     }
 }
