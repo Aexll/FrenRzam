@@ -135,9 +135,6 @@ GameObject:
   - component: {fileID: 105584889}
   - component: {fileID: 105584888}
   - component: {fileID: 105584887}
-  - component: {fileID: 105584885}
-  - component: {fileID: 105584882}
-  - component: {fileID: 105584880}
   - component: {fileID: 105584879}
   - component: {fileID: 105584878}
   m_Layer: 0
@@ -184,91 +181,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &105584880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105584877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d89c7c6f975381347badf791405c88c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  characterDB: {fileID: 0}
-  dataBase: {fileID: 0}
-  nameText: {fileID: 0}
-  artworkSprite: {fileID: 0}
---- !u!114 &105584882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105584877}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f73437b7d2cbf4bade87f2cf51198a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platforms:
-  - {fileID: 1209203923307537404, guid: f4d482f3e21b5b1449ac564d01bb82fe, type: 3}
-  - {fileID: 4450929335021072383, guid: 99a5af54f3e9d9a44a79987fd2f20822, type: 3}
-  - {fileID: 1252860332642512155, guid: a20777b0e22537b499666968302ccffe, type: 3}
-  - {fileID: 1209203923307537404, guid: 7d7216091f405664ebf8d9c205b518a0, type: 3}
-  - {fileID: 9118492971209869709, guid: 096ffa5b41dc09149aeb48afa66c075c, type: 3}
-  - {fileID: 9118492971209869709, guid: 2bc53d941a00a804c8987c386bf07ada, type: 3}
-  - {fileID: 9118492971209869709, guid: 9274524d78a2c1e45b71a26f1a21b1da, type: 3}
-  - {fileID: 1209203923307537404, guid: d866d3c71ea81924e880450e3c02c380, type: 3}
-  - {fileID: 6917670967570661768, guid: 90b278d86a2fde84ab461be3f665a73a, type: 3}
-  - {fileID: 6917670967570661768, guid: 549de617e882a4c419d01f327c35b70f, type: 3}
-  - {fileID: 1209203923307537404, guid: a13c84dfbd6994e4c9574292bbb38b70, type: 3}
-  - {fileID: 1209203923307537404, guid: e6ddc006331872742ab381626f574fb4, type: 3}
-  - {fileID: 1252860332642512155, guid: 5a418e58c6c3d6348a6deb2e7533e13b, type: 3}
-  - {fileID: 4450929335021072383, guid: 80304ca930e0e0846b1046bd78b1e0cb, type: 3}
-  - {fileID: 3422438880392786653, guid: bbef5f032562390489d99dc813cd1d76, type: 3}
-  platform_raritys: f40100006400000064000000050000000200000002000000010000006400000064000000640000006400000005000000640000006400000064000000
-  bonus:
-  - {fileID: 8997019875119633213, guid: 87225fb64a645da4cbab9c76622a105f, type: 3}
-  - {fileID: 6484903708995170189, guid: 4541076f528796b429f346b69df5002e, type: 3}
-  - {fileID: 6484903708995170189, guid: aac8a58241fb9484b923c938a3105ae3, type: 3}
-  spawnSize: 8
-  spawnHeight: 6
---- !u!114 &105584885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105584877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf6d420698383384a82489faa23ba895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnScoreChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnScoreChangedText:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  defaultScore: 0
 --- !u!114 &105584887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,6 +618,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1142052719}
+        m_TargetAssemblyTypeName: S_SpriteChanger, Assembly-CSharp
+        m_MethodName: UpdateCharacter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508822239}
         m_TargetAssemblyTypeName: S_SpriteChanger, Assembly-CSharp
         m_MethodName: UpdateCharacter
         m_Mode: 0
@@ -2543,7 +2467,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1533280060}
         m_TargetAssemblyTypeName: S_ChangePlayerpref, Assembly-CSharp
         m_MethodName: Save
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3016,6 +2940,8 @@ GameObject:
   - component: {fileID: 1596491092}
   - component: {fileID: 1596491091}
   - component: {fileID: 1596491090}
+  - component: {fileID: 1596491095}
+  - component: {fileID: 1596491094}
   m_Layer: 0
   m_Name: saviour
   m_TagString: Untagged
@@ -3101,6 +3027,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1596491094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596491089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dfaf1bc1c6c024429da0d98ea293497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnJump:
+    m_PersistentCalls:
+      m_Calls: []
+  jumpforce: 1
+--- !u!114 &1596491095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596491089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb782833e46a66949a5e01b1733d20ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPlayerTouch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1596491094}
+        m_TargetAssemblyTypeName: S_Jump, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: S_Player, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1600761936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,6 +3846,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1142052719}
+        m_TargetAssemblyTypeName: S_SpriteChanger, Assembly-CSharp
+        m_MethodName: UpdateCharacter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508822239}
         m_TargetAssemblyTypeName: S_SpriteChanger, Assembly-CSharp
         m_MethodName: UpdateCharacter
         m_Mode: 0

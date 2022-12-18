@@ -8,8 +8,6 @@ public class S_ChangePlayerpref : MonoBehaviour
 
     public void Save(int selectedOption)
     {
-        Debug.Log("saved yaa" + selectedOption + " to " + fieldName);
         PlayerPrefs.SetInt(fieldName, selectedOption);
-        
     }
 }
