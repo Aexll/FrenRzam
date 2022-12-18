@@ -12,6 +12,6 @@ public class S_GetPlayerprefSprite : MonoBehaviour
     {
         theSprite.sprite = characterDB.GetCharacter(PlayerPrefs.GetInt(fieldName)).characterSprite;
         Debug.Log(PlayerPrefs.GetInt(fieldName));
-        Debug.Log("saved " + characterDB.GetCharacter(PlayerPrefs.GetInt(fieldName)) + " to " + fieldName);
+        //Debug.Log("saved " + characterDB.GetCharacter(PlayerPrefs.GetInt(fieldName)) + " to " + fieldName);
     }
 }

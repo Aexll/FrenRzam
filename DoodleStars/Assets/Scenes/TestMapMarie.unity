@@ -1854,6 +1854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1530278760}
   - component: {fileID: 1530278759}
+  - component: {fileID: 1530278761}
   m_Layer: 0
   m_Name: SpriteR
   m_TagString: Untagged
@@ -1931,6 +1932,21 @@ Transform:
   m_Father: {fileID: 1655117489}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530278761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530278758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f3a306ffcee14438d78cca3c6a7b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fieldName: PlayerSprite
+  theSprite: {fileID: 1530278759}
+  characterDB: {fileID: 11400000, guid: 83eeb1b0b3af7e54eb604d973faab28b, type: 2}
 --- !u!1 &1531964965
 GameObject:
   m_ObjectHideFlags: 0

@@ -2714,7 +2714,7 @@ MonoBehaviour:
   OnLoadScene:
     m_PersistentCalls:
       m_Calls: []
-  defaultScene: TestMap
+  defaultScene: TestMapMarie
 --- !u!1 &1399881497
 GameObject:
   m_ObjectHideFlags: 0
