@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1bd5e3c275b184d9b6ca8f4f9ef2f7, type: 3}
+  m_Name: B_Winter_elite
+  m_EditorClassIdentifier: 
+  naming: Winter
+  description: All i want for christmas, is stars !
+  height: 50
+  step: 2
+  platforms:
+  - {fileID: 4450929335021072383, guid: c7e640efc0d19a44191e8b3f952c2421, type: 3}
+  - {fileID: 6917670967570661768, guid: 90b278d86a2fde84ab461be3f665a73a, type: 3}
+  - {fileID: 6917670967570661768, guid: a7400c9b1a412a74ca977dcb0f5ca5bc, type: 3}
+  spawnrate:
+  - 100
+  - 100
+  - 100

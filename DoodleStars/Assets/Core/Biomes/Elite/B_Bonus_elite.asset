@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1bd5e3c275b184d9b6ca8f4f9ef2f7, type: 3}
+  m_Name: B_Bonus_elite
+  m_EditorClassIdentifier: 
+  naming: Bonus !
+  description: Bonus biome !
+  height: 10
+  step: 2
+  platforms:
+  - {fileID: 1209203923307537404, guid: 34a3b22d85dfc404796878bf6c2203b7, type: 3}
+  - {fileID: 1209203923307537404, guid: e6ddc006331872742ab381626f574fb4, type: 3}
+  spawnrate:
+  - 90
+  - 10

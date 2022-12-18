@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1bd5e3c275b184d9b6ca8f4f9ef2f7, type: 3}
+  m_Name: B_Normal_elite
+  m_EditorClassIdentifier: 
+  naming: Normal
+  description: This is the normal biome !
+  height: 50
+  step: 2
+  platforms:
+  - {fileID: 1209203923307537404, guid: f4d482f3e21b5b1449ac564d01bb82fe, type: 3}
+  - {fileID: 4450929335021072383, guid: 99a5af54f3e9d9a44a79987fd2f20822, type: 3}
+  - {fileID: 4450929335021072383, guid: 80304ca930e0e0846b1046bd78b1e0cb, type: 3}
+  - {fileID: 1252860332642512155, guid: a20777b0e22537b499666968302ccffe, type: 3}
+  - {fileID: 1252860332642512155, guid: 5a418e58c6c3d6348a6deb2e7533e13b, type: 3}
+  - {fileID: 1209203923307537404, guid: 7d7216091f405664ebf8d9c205b518a0, type: 3}
+  - {fileID: 9118492971209869709, guid: 096ffa5b41dc09149aeb48afa66c075c, type: 3}
+  - {fileID: 9118492971209869709, guid: 2bc53d941a00a804c8987c386bf07ada, type: 3}
+  - {fileID: 9118492971209869709, guid: 9274524d78a2c1e45b71a26f1a21b1da, type: 3}
+  spawnrate:
+  - 50
+  - 20
+  - 5
+  - 5
+  - 5
+  - 10
+  - 3
+  - 1
+  - 0.1
