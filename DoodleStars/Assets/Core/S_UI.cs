@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class S_UI : MonoBehaviour
 {
-
+    [SerializeField] private UnityEvent OnSpaceBarPressed;
     public GameObject LoseWidget;
     public string menuMapName;
 
@@ -24,7 +25,7 @@ public class S_UI : MonoBehaviour
     {
         if (LoseWidget.active && (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Space)))
         {
-            Restart();
+            OnSpaceBarPressed?.Invoke();
         }
     }
 }

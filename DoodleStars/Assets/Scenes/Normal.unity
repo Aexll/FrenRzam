@@ -803,8 +803,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49733201ddf97654f9750570d872ebcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnSpaceBarPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1450665026}
+        m_TargetAssemblyTypeName: S_LoadScene, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   LoseWidget: {fileID: 1850832303}
-  menuMapName: TestMap
+  menuMapName: Normal
 --- !u!1001 &553113592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1717,6 +1732,7 @@ GameObject:
   - component: {fileID: 1450665022}
   - component: {fileID: 1450665025}
   - component: {fileID: 1450665024}
+  - component: {fileID: 1450665026}
   - component: {fileID: 1450665023}
   m_Layer: 5
   m_Name: Button
@@ -1790,9 +1806,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 510971230}
-        m_TargetAssemblyTypeName: S_UI, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 1450665026}
+        m_TargetAssemblyTypeName: S_LoadScene, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1840,6 +1856,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450665021}
   m_CullTransparentMesh: 1
+--- !u!114 &1450665026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450665021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f222ee2d0b3ba419041ca79aa4df1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnLoadScene:
+    m_PersistentCalls:
+      m_Calls: []
+  defaultScene: Normal
 --- !u!1001 &1529801339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3142,7 +3174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Play again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
