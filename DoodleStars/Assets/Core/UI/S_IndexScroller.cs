@@ -6,7 +6,7 @@ using UnityEngine.TextCore.Text;
 
 public class S_IndexScroller : MonoBehaviour
 {
-    [SerializeField] private UnityEvent<string, int> OnChange;
+    [SerializeField] private UnityEvent<int> OnChange;
 
     [SerializeField] private int min, max;
 
@@ -30,7 +30,7 @@ public class S_IndexScroller : MonoBehaviour
             Load();
         }
 
-        OnChange.Invoke(fieldPlayerPref, selectedOption);
+        OnChange.Invoke(selectedOption);
     }
 
     public void NextOption()
@@ -42,19 +42,19 @@ public class S_IndexScroller : MonoBehaviour
             selectedOption = min;
         }
 
-        OnChange?.Invoke(fieldPlayerPref, selectedOption);
+        OnChange?.Invoke(selectedOption);
     }
 
     public void PreviousOption()
     {
         selectedOption--;
-        
+
         if (selectedOption < 0)
         {
             selectedOption = max - 1;
         }
 
-        OnChange?.Invoke(fieldPlayerPref, selectedOption); 
+        OnChange?.Invoke(selectedOption); 
     }
 
     private void Load()

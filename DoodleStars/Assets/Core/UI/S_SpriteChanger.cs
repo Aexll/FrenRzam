@@ -15,7 +15,7 @@ public class S_SpriteChanger : MonoBehaviour
     public TextMeshProUGUI nameText;
     public SpriteRenderer artworkSprite;
 
-    public void UpdateCharacter(string playerPrefFieldName, int selectedOption)
+    public void UpdateCharacter(int selectedOption)
     {
         SpriteCharacter character = characterDB.GetCharacter(selectedOption);
         artworkSprite.sprite = character.characterSprite;

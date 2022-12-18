@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class S_GetPlayerprefSprite : MonoBehaviour
 {
-    public Sprite theSprite;
+    [SerializeField] private string fieldName;
+    public SpriteRenderer theSprite;
     public CharacterDatabase characterDB;
 
     private void Start()
     {
-        theSprite = characterDB.GetCharacter(PlayerPrefs.GetInt("selectedCharacter")).characterSprite;
+        theSprite.sprite = characterDB.GetCharacter(PlayerPrefs.GetInt(fieldName)).characterSprite;
+        Debug.Log("saved " + characterDB.GetCharacter(PlayerPrefs.GetInt(fieldName)) + " to " + fieldName);
     }
 }
