@@ -24,8 +24,6 @@ public class S_Player : MonoBehaviour
     public UnityEvent OnDeath;
     public UnityEvent<Vector3> OnJump;
 
-
-
     private bool isAlive = true;
     public bool IsAlive
     {

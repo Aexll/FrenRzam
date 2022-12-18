@@ -16,6 +16,7 @@ public class S_UI : MonoBehaviour
 
     public void Restart()
     {
+        menuMapName = PlayerPrefs.GetString("map");
         SceneManager.LoadScene(menuMapName);
     }
 

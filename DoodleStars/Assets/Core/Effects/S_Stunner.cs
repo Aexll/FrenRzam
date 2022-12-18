@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class S_Stunner : MonoBehaviour
 {
-
     public void Stun(GameObject player)
     {
         var player_script = player.GetComponent<S_Player>();

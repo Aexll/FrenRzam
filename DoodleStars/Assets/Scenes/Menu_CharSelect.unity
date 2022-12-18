@@ -1621,7 +1621,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 640792511}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 640792513}
+        m_TargetAssemblyTypeName: S_SetStrinPlayerpref, Assembly-CSharp
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &640792511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1669,10 +1681,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 640792508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1578ec442e16e8f46b3c17829659a557, type: 3}
+  m_Script: {fileID: 11500000, guid: fa7a1526a1347544fb07b31732d262f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Normal
+  fieldName: Map
+  data: Normal
 --- !u!1 &679723407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,6 +1696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 679723411}
   - component: {fileID: 679723410}
+  - component: {fileID: 679723412}
   - component: {fileID: 679723409}
   - component: {fileID: 679723408}
   m_Layer: 5
@@ -1780,6 +1794,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &679723412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679723407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73becc5dc19321246941cbf40a7c26c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fieldName: Map
 --- !u!1 &741798359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,7 +3181,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1600761939}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1600761941}
+        m_TargetAssemblyTypeName: S_SetStrinPlayerpref, Assembly-CSharp
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1600761939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3202,10 +3241,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1600761936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1578ec442e16e8f46b3c17829659a557, type: 3}
+  m_Script: {fileID: 11500000, guid: fa7a1526a1347544fb07b31732d262f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Elite
+  fieldName: Map
+  data: Elite
 --- !u!1 &1787229491
 GameObject:
   m_ObjectHideFlags: 0

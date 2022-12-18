@@ -10,13 +10,13 @@ public class S_LoadScene : MonoBehaviour
     public string defaultScene;
     public void Awake()
     {
-        PlayerPrefs.SetString("scene", defaultScene);
-        Debug.Log(PlayerPrefs.GetString("scene"));
+        PlayerPrefs.SetString("Map", defaultScene);
     }
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetString("scene"));
+        Debug.Log(PlayerPrefs.GetString("Map"));
+        SceneManager.LoadScene(PlayerPrefs.GetString("Map"));
         OnLoadScene?.Invoke();
     }
 }
