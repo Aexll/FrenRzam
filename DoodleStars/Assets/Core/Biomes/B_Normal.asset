@@ -26,6 +26,7 @@ MonoBehaviour:
   - {fileID: 9118492971209869709, guid: 096ffa5b41dc09149aeb48afa66c075c, type: 3}
   - {fileID: 9118492971209869709, guid: 2bc53d941a00a804c8987c386bf07ada, type: 3}
   - {fileID: 9118492971209869709, guid: 9274524d78a2c1e45b71a26f1a21b1da, type: 3}
+  - {fileID: 1209203923307537404, guid: a650695ac8fec0b44b64824b9424e833, type: 3}
   spawnrate:
   - 50
   - 20
@@ -36,3 +37,4 @@ MonoBehaviour:
   - 3
   - 1
   - 0.1
+  - 1
