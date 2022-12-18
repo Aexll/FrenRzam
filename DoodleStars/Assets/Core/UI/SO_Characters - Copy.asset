@@ -15,9 +15,9 @@ MonoBehaviour:
   character:
   - characterSprite: {fileID: 21300000, guid: ebd6c29bd7d07a944a05e7ae95ead687, type: 3}
     characterName: Doodle
-  - characterSprite: {fileID: 21300000, guid: cdeb71f3b3ff09845b3b9efbc3be80ad, type: 3}
+  - characterSprite: {fileID: 21300000, guid: 210c8e67e82c78542983205e40912b48, type: 3}
+    characterName: Santa
+  - characterSprite: {fileID: 21300000, guid: 54442aa368aaf6940b8c6b6a7466f9e1, type: 3}
+    characterName: Witch
+  - characterSprite: {fileID: 21300000, guid: 7dabd01f597120d438458e5b3003b5fd, type: 3}
     characterName: Angel
-  - characterSprite: {fileID: 21300000, guid: 4748ede80aeec6a4b9a112ae9ba4d432, type: 3}
-    characterName: Ninja
-  - characterSprite: {fileID: 21300000, guid: a76f30d329869384e92d67dbb7d723a4, type: 3}
-    characterName: Easter
